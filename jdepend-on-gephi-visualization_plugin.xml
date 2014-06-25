@@ -1,0 +1,1771 @@
+<?xml version="1.0"?>
+<JDepend>
+    <Packages>
+
+        <Package name="com.connectina.swing.fontchooser">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="com.jogamp.common.nio">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="com.jogamp.newt.awt">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="com.jogamp.newt.opengl">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="com.jogamp.opengl.util.awt">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="com.jogamp.opengl.util.gl2">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="it.unimi.dsi.fastutil.ints">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="net.java.dev.colorchooser">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="net.miginfocom.swing">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.gephi.attribute.api">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.gephi.desktop.project.api">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.gephi.graph.api">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.gephi.lib.gleem.linalg">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.gephi.lib.validation">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.gephi.project.api">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.gephi.project.spi">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.gephi.tools.api">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.gephi.ui.components">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.gephi.ui.utils">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.gephi.visualization">
+            <Stats>
+                <TotalClasses>8</TotalClasses>
+                <ConcreteClasses>7</ConcreteClasses>
+                <AbstractClasses>1</AbstractClasses>
+                <Ca>17</Ca>
+                <Ce>20</Ce>
+                <A>0.12</A>
+                <I>0.54</I>
+                <D>0.33</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+                <Class sourceFile="VizArchitecture.java">
+                    org.gephi.visualization.VizArchitecture
+                </Class>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="GraphLimits.java">
+                    org.gephi.visualization.GraphLimits
+                </Class>
+                <Class sourceFile="Installer.java">
+                    org.gephi.visualization.Installer
+                </Class>
+                <Class sourceFile="VizController.java">
+                    org.gephi.visualization.VizController
+                </Class>
+                <Class sourceFile="VizController.java">
+                    org.gephi.visualization.VizController$1
+                </Class>
+                <Class sourceFile="VizModel.java">
+                    org.gephi.visualization.VizModel
+                </Class>
+                <Class sourceFile="VizModel.java">
+                    org.gephi.visualization.VizModel$1
+                </Class>
+                <Class sourceFile="VizModelPersistenceProvider.java">
+                    org.gephi.visualization.VizModelPersistenceProvider
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>org.gephi.attribute.api</Package>
+                <Package>org.gephi.graph.api</Package>
+                <Package>org.gephi.lib.gleem.linalg</Package>
+                <Package>org.gephi.project.api</Package>
+                <Package>org.gephi.project.spi</Package>
+                <Package>org.gephi.ui.utils</Package>
+                <Package>org.gephi.visualization.api</Package>
+                <Package>org.gephi.visualization.api.selection</Package>
+                <Package>org.gephi.visualization.apiimpl</Package>
+                <Package>org.gephi.visualization.bridge</Package>
+                <Package>org.gephi.visualization.config</Package>
+                <Package>org.gephi.visualization.events</Package>
+                <Package>org.gephi.visualization.model</Package>
+                <Package>org.gephi.visualization.opengl</Package>
+                <Package>org.gephi.visualization.scheduler</Package>
+                <Package>org.gephi.visualization.screenshot</Package>
+                <Package>org.gephi.visualization.swing</Package>
+                <Package>org.gephi.visualization.text</Package>
+                <Package>org.openide.modules</Package>
+                <Package>org.openide.util</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>org.gephi.visualization.api.initializer</Package>
+                <Package>org.gephi.visualization.api.selection</Package>
+                <Package>org.gephi.visualization.apiimpl</Package>
+                <Package>org.gephi.visualization.bridge</Package>
+                <Package>org.gephi.visualization.component</Package>
+                <Package>org.gephi.visualization.events</Package>
+                <Package>org.gephi.visualization.model</Package>
+                <Package>org.gephi.visualization.model.edge</Package>
+                <Package>org.gephi.visualization.model.node</Package>
+                <Package>org.gephi.visualization.octree</Package>
+                <Package>org.gephi.visualization.opengl</Package>
+                <Package>org.gephi.visualization.options</Package>
+                <Package>org.gephi.visualization.scheduler</Package>
+                <Package>org.gephi.visualization.screenshot</Package>
+                <Package>org.gephi.visualization.selection</Package>
+                <Package>org.gephi.visualization.swing</Package>
+                <Package>org.gephi.visualization.text</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="org.gephi.visualization.api">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.gephi.visualization.api.initializer">
+            <Stats>
+                <TotalClasses>1</TotalClasses>
+                <ConcreteClasses>0</ConcreteClasses>
+                <AbstractClasses>1</AbstractClasses>
+                <Ca>5</Ca>
+                <Ce>7</Ce>
+                <A>1</A>
+                <I>0.58</I>
+                <D>0.58</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+                <Class sourceFile="Modeler.java">
+                    org.gephi.visualization.api.initializer.Modeler
+                </Class>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>org.gephi.graph.api</Package>
+                <Package>org.gephi.visualization</Package>
+                <Package>org.gephi.visualization.apiimpl</Package>
+                <Package>org.gephi.visualization.model</Package>
+                <Package>org.gephi.visualization.model.node</Package>
+                <Package>org.gephi.visualization.opengl</Package>
+                <Package>org.gephi.visualization.swing</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>org.gephi.visualization.component</Package>
+                <Package>org.gephi.visualization.model</Package>
+                <Package>org.gephi.visualization.model.edge</Package>
+                <Package>org.gephi.visualization.model.node</Package>
+                <Package>org.gephi.visualization.opengl</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="org.gephi.visualization.api.selection">
+            <Stats>
+                <TotalClasses>3</TotalClasses>
+                <ConcreteClasses>1</ConcreteClasses>
+                <AbstractClasses>2</AbstractClasses>
+                <Ca>5</Ca>
+                <Ce>6</Ce>
+                <A>0.67</A>
+                <I>0.55</I>
+                <D>0.21</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+                <Class sourceFile="SelectionArea.java">
+                    org.gephi.visualization.api.selection.SelectionArea
+                </Class>
+                <Class sourceFile="SelectionType.java">
+                    org.gephi.visualization.api.selection.SelectionType
+                </Class>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="SelectionManager.java">
+                    org.gephi.visualization.api.selection.SelectionManager
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>org.gephi.graph.api</Package>
+                <Package>org.gephi.lib.gleem.linalg</Package>
+                <Package>org.gephi.visualization</Package>
+                <Package>org.gephi.visualization.apiimpl</Package>
+                <Package>org.gephi.visualization.model.node</Package>
+                <Package>org.gephi.visualization.opengl</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>org.gephi.visualization</Package>
+                <Package>org.gephi.visualization.component</Package>
+                <Package>org.gephi.visualization.opengl</Package>
+                <Package>org.gephi.visualization.selection</Package>
+                <Package>org.gephi.visualization.swing</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="org.gephi.visualization.apiimpl">
+            <Stats>
+                <TotalClasses>11</TotalClasses>
+                <ConcreteClasses>4</ConcreteClasses>
+                <AbstractClasses>7</AbstractClasses>
+                <Ca>16</Ca>
+                <Ce>4</Ce>
+                <A>0.64</A>
+                <I>0.2</I>
+                <D>0.16</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+                <Class sourceFile="Engine.java">
+                    org.gephi.visualization.apiimpl.Engine
+                </Class>
+                <Class sourceFile="GraphDrawable.java">
+                    org.gephi.visualization.apiimpl.GraphDrawable
+                </Class>
+                <Class sourceFile="GraphIO.java">
+                    org.gephi.visualization.apiimpl.GraphIO
+                </Class>
+                <Class sourceFile="PropertiesBarAddon.java">
+                    org.gephi.visualization.apiimpl.PropertiesBarAddon
+                </Class>
+                <Class sourceFile="Scheduler.java">
+                    org.gephi.visualization.apiimpl.Scheduler
+                </Class>
+                <Class sourceFile="VizEventListener.java">
+                    org.gephi.visualization.apiimpl.VizEventListener
+                </Class>
+                <Class sourceFile="VizEventManager.java">
+                    org.gephi.visualization.apiimpl.VizEventManager
+                </Class>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="GraphContextMenu.java">
+                    org.gephi.visualization.apiimpl.GraphContextMenu
+                </Class>
+                <Class sourceFile="VizConfig.java">
+                    org.gephi.visualization.apiimpl.VizConfig
+                </Class>
+                <Class sourceFile="VizEvent.java">
+                    org.gephi.visualization.apiimpl.VizEvent
+                </Class>
+                <Class sourceFile="VizEvent.java">
+                    org.gephi.visualization.apiimpl.VizEvent$Type
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>org.gephi.lib.gleem.linalg</Package>
+                <Package>org.gephi.ui.utils</Package>
+                <Package>org.gephi.visualization</Package>
+                <Package>org.openide.util</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>org.gephi.visualization</Package>
+                <Package>org.gephi.visualization.api.initializer</Package>
+                <Package>org.gephi.visualization.api.selection</Package>
+                <Package>org.gephi.visualization.bridge</Package>
+                <Package>org.gephi.visualization.component</Package>
+                <Package>org.gephi.visualization.events</Package>
+                <Package>org.gephi.visualization.model.edge</Package>
+                <Package>org.gephi.visualization.model.node</Package>
+                <Package>org.gephi.visualization.octree</Package>
+                <Package>org.gephi.visualization.opengl</Package>
+                <Package>org.gephi.visualization.options</Package>
+                <Package>org.gephi.visualization.scheduler</Package>
+                <Package>org.gephi.visualization.screenshot</Package>
+                <Package>org.gephi.visualization.selection</Package>
+                <Package>org.gephi.visualization.swing</Package>
+                <Package>org.gephi.visualization.text</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="org.gephi.visualization.apiimpl.contextmenuitems">
+            <Stats>
+                <TotalClasses>11</TotalClasses>
+                <ConcreteClasses>9</ConcreteClasses>
+                <AbstractClasses>2</AbstractClasses>
+                <Ca>0</Ca>
+                <Ce>6</Ce>
+                <A>0.18</A>
+                <I>1</I>
+                <D>0.18</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+                <Class sourceFile="BasicItem.java">
+                    org.gephi.visualization.apiimpl.contextmenuitems.BasicItem
+                </Class>
+                <Class sourceFile="CopyOrMoveToWorkspace.java">
+                    org.gephi.visualization.apiimpl.contextmenuitems.CopyOrMoveToWorkspace
+                </Class>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="CopyOrMoveToWorkspaceSubItem.java">
+                    org.gephi.visualization.apiimpl.contextmenuitems.CopyOrMoveToWorkspaceSubItem
+                </Class>
+                <Class sourceFile="CopyToWorkspace.java">
+                    org.gephi.visualization.apiimpl.contextmenuitems.CopyToWorkspace
+                </Class>
+                <Class sourceFile="CopyToWorkspaceForDataLaboratory.java">
+                    org.gephi.visualization.apiimpl.contextmenuitems.CopyToWorkspaceForDataLaboratoryManipulator
+                </Class>
+                <Class sourceFile="Delete.java">
+                    org.gephi.visualization.apiimpl.contextmenuitems.Delete
+                </Class>
+                <Class sourceFile="Free.java">
+                    org.gephi.visualization.apiimpl.contextmenuitems.Free
+                </Class>
+                <Class sourceFile="MoveToWorkspace.java">
+                    org.gephi.visualization.apiimpl.contextmenuitems.MoveToWorkspace
+                </Class>
+                <Class sourceFile="MoveToWorkspaceForDataLaboratory.java">
+                    org.gephi.visualization.apiimpl.contextmenuitems.MoveToWorkspaceForDataLaboratoryManipulator
+                </Class>
+                <Class sourceFile="SelectInDataLaboratory.java">
+                    org.gephi.visualization.apiimpl.contextmenuitems.SelectInDataLaboratory
+                </Class>
+                <Class sourceFile="Settle.java">
+                    org.gephi.visualization.apiimpl.contextmenuitems.Settle
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>org.gephi.desktop.project.api</Package>
+                <Package>org.gephi.graph.api</Package>
+                <Package>org.gephi.project.api</Package>
+                <Package>org.gephi.visualization.spi</Package>
+                <Package>org.openide</Package>
+                <Package>org.openide.util</Package>
+            </DependsUpon>
+
+            <UsedBy>
+            </UsedBy>
+        </Package>
+
+        <Package name="org.gephi.visualization.bridge">
+            <Stats>
+                <TotalClasses>2</TotalClasses>
+                <ConcreteClasses>2</ConcreteClasses>
+                <AbstractClasses>0</AbstractClasses>
+                <Ca>2</Ca>
+                <Ce>9</Ce>
+                <A>0</A>
+                <I>0.82</I>
+                <D>0.18</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="DHNSDataBridge.java">
+                    org.gephi.visualization.bridge.DHNSDataBridge
+                </Class>
+                <Class sourceFile="DataBridge.java">
+                    org.gephi.visualization.bridge.DataBridge
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>org.gephi.graph.api</Package>
+                <Package>org.gephi.visualization</Package>
+                <Package>org.gephi.visualization.apiimpl</Package>
+                <Package>org.gephi.visualization.model</Package>
+                <Package>org.gephi.visualization.model.edge</Package>
+                <Package>org.gephi.visualization.model.node</Package>
+                <Package>org.gephi.visualization.octree</Package>
+                <Package>org.gephi.visualization.opengl</Package>
+                <Package>org.openide.util</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>org.gephi.visualization</Package>
+                <Package>org.gephi.visualization.opengl</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="org.gephi.visualization.component">
+            <Stats>
+                <TotalClasses>95</TotalClasses>
+                <ConcreteClasses>94</ConcreteClasses>
+                <AbstractClasses>1</AbstractClasses>
+                <Ca>0</Ca>
+                <Ce>23</Ce>
+                <A>0.01</A>
+                <I>1</I>
+                <D>0.01</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+                <Class sourceFile="VizToolbarGroup.java">
+                    org.gephi.visualization.component.VizToolbarGroup
+                </Class>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="ActionsToolbar.java">
+                    org.gephi.visualization.component.ActionsToolbar
+                </Class>
+                <Class sourceFile="ActionsToolbar.java">
+                    org.gephi.visualization.component.ActionsToolbar$1
+                </Class>
+                <Class sourceFile="ActionsToolbar.java">
+                    org.gephi.visualization.component.ActionsToolbar$2
+                </Class>
+                <Class sourceFile="ActionsToolbar.java">
+                    org.gephi.visualization.component.ActionsToolbar$3
+                </Class>
+                <Class sourceFile="ActionsToolbar.java">
+                    org.gephi.visualization.component.ActionsToolbar$4
+                </Class>
+                <Class sourceFile="ActionsToolbar.java">
+                    org.gephi.visualization.component.ActionsToolbar$5
+                </Class>
+                <Class sourceFile="ActionsToolbar.java">
+                    org.gephi.visualization.component.ActionsToolbar$6
+                </Class>
+                <Class sourceFile="ActionsToolbar.java">
+                    org.gephi.visualization.component.ActionsToolbar$7
+                </Class>
+                <Class sourceFile="ActionsToolbar.java">
+                    org.gephi.visualization.component.ActionsToolbar$8
+                </Class>
+                <Class sourceFile="CollapsePanel.java">
+                    org.gephi.visualization.component.CollapsePanel
+                </Class>
+                <Class sourceFile="CollapsePanel.java">
+                    org.gephi.visualization.component.CollapsePanel$1
+                </Class>
+                <Class sourceFile="EdgeSettingsPanel.java">
+                    org.gephi.visualization.component.EdgeSettingsPanel
+                </Class>
+                <Class sourceFile="EdgeSettingsPanel.java">
+                    org.gephi.visualization.component.EdgeSettingsPanel$1
+                </Class>
+                <Class sourceFile="EdgeSettingsPanel.java">
+                    org.gephi.visualization.component.EdgeSettingsPanel$2
+                </Class>
+                <Class sourceFile="EdgeSettingsPanel.java">
+                    org.gephi.visualization.component.EdgeSettingsPanel$3
+                </Class>
+                <Class sourceFile="EdgeSettingsPanel.java">
+                    org.gephi.visualization.component.EdgeSettingsPanel$4
+                </Class>
+                <Class sourceFile="EdgeSettingsPanel.java">
+                    org.gephi.visualization.component.EdgeSettingsPanel$5
+                </Class>
+                <Class sourceFile="EdgeSettingsPanel.java">
+                    org.gephi.visualization.component.EdgeSettingsPanel$6
+                </Class>
+                <Class sourceFile="EdgeSettingsPanel.java">
+                    org.gephi.visualization.component.EdgeSettingsPanel$7
+                </Class>
+                <Class sourceFile="EdgeSettingsPanel.java">
+                    org.gephi.visualization.component.EdgeSettingsPanel$8
+                </Class>
+                <Class sourceFile="EdgeSettingsPanel.java">
+                    org.gephi.visualization.component.EdgeSettingsPanel$9
+                </Class>
+                <Class sourceFile="GlobalSettingsPanel.java">
+                    org.gephi.visualization.component.GlobalSettingsPanel
+                </Class>
+                <Class sourceFile="GlobalSettingsPanel.java">
+                    org.gephi.visualization.component.GlobalSettingsPanel$1
+                </Class>
+                <Class sourceFile="GlobalSettingsPanel.java">
+                    org.gephi.visualization.component.GlobalSettingsPanel$2
+                </Class>
+                <Class sourceFile="GlobalSettingsPanel.java">
+                    org.gephi.visualization.component.GlobalSettingsPanel$3
+                </Class>
+                <Class sourceFile="GlobalSettingsPanel.java">
+                    org.gephi.visualization.component.GlobalSettingsPanel$4
+                </Class>
+                <Class sourceFile="GlobalSettingsPanel.java">
+                    org.gephi.visualization.component.GlobalSettingsPanel$5
+                </Class>
+                <Class sourceFile="GraphTopComponent.java">
+                    org.gephi.visualization.component.GraphTopComponent
+                </Class>
+                <Class sourceFile="GraphTopComponent.java">
+                    org.gephi.visualization.component.GraphTopComponent$1
+                </Class>
+                <Class sourceFile="LabelAttributesPanel.java">
+                    org.gephi.visualization.component.LabelAttributesPanel
+                </Class>
+                <Class sourceFile="LabelAttributesPanel.java">
+                    org.gephi.visualization.component.LabelAttributesPanel$1
+                </Class>
+                <Class sourceFile="LabelAttributesPanel.java">
+                    org.gephi.visualization.component.LabelAttributesPanel$2
+                </Class>
+                <Class sourceFile="LabelAttributesPanel.java">
+                    org.gephi.visualization.component.LabelAttributesPanel$3
+                </Class>
+                <Class sourceFile="LabelAttributesPanel.java">
+                    org.gephi.visualization.component.LabelAttributesPanel$AttributesCheckBox
+                </Class>
+                <Class sourceFile="LabelSettingsPanel.java">
+                    org.gephi.visualization.component.LabelSettingsPanel
+                </Class>
+                <Class sourceFile="LabelSettingsPanel.java">
+                    org.gephi.visualization.component.LabelSettingsPanel$1
+                </Class>
+                <Class sourceFile="LabelSettingsPanel.java">
+                    org.gephi.visualization.component.LabelSettingsPanel$10
+                </Class>
+                <Class sourceFile="LabelSettingsPanel.java">
+                    org.gephi.visualization.component.LabelSettingsPanel$11
+                </Class>
+                <Class sourceFile="LabelSettingsPanel.java">
+                    org.gephi.visualization.component.LabelSettingsPanel$12
+                </Class>
+                <Class sourceFile="LabelSettingsPanel.java">
+                    org.gephi.visualization.component.LabelSettingsPanel$13
+                </Class>
+                <Class sourceFile="LabelSettingsPanel.java">
+                    org.gephi.visualization.component.LabelSettingsPanel$14
+                </Class>
+                <Class sourceFile="LabelSettingsPanel.java">
+                    org.gephi.visualization.component.LabelSettingsPanel$2
+                </Class>
+                <Class sourceFile="LabelSettingsPanel.java">
+                    org.gephi.visualization.component.LabelSettingsPanel$3
+                </Class>
+                <Class sourceFile="LabelSettingsPanel.java">
+                    org.gephi.visualization.component.LabelSettingsPanel$4
+                </Class>
+                <Class sourceFile="LabelSettingsPanel.java">
+                    org.gephi.visualization.component.LabelSettingsPanel$5
+                </Class>
+                <Class sourceFile="LabelSettingsPanel.java">
+                    org.gephi.visualization.component.LabelSettingsPanel$6
+                </Class>
+                <Class sourceFile="LabelSettingsPanel.java">
+                    org.gephi.visualization.component.LabelSettingsPanel$7
+                </Class>
+                <Class sourceFile="LabelSettingsPanel.java">
+                    org.gephi.visualization.component.LabelSettingsPanel$8
+                </Class>
+                <Class sourceFile="LabelSettingsPanel.java">
+                    org.gephi.visualization.component.LabelSettingsPanel$9
+                </Class>
+                <Class sourceFile="NodeSettingsPanel.java">
+                    org.gephi.visualization.component.NodeSettingsPanel
+                </Class>
+                <Class sourceFile="NodeSettingsPanel.java">
+                    org.gephi.visualization.component.NodeSettingsPanel$1
+                </Class>
+                <Class sourceFile="NodeSettingsPanel.java">
+                    org.gephi.visualization.component.NodeSettingsPanel$2
+                </Class>
+                <Class sourceFile="NodeSettingsPanel.java">
+                    org.gephi.visualization.component.NodeSettingsPanel$3
+                </Class>
+                <Class sourceFile="SelectionPanel.java">
+                    org.gephi.visualization.component.SelectionPanel
+                </Class>
+                <Class sourceFile="SelectionToolbar.java">
+                    org.gephi.visualization.component.SelectionToolbar
+                </Class>
+                <Class sourceFile="SelectionToolbar.java">
+                    org.gephi.visualization.component.SelectionToolbar$1
+                </Class>
+                <Class sourceFile="SelectionToolbar.java">
+                    org.gephi.visualization.component.SelectionToolbar$2
+                </Class>
+                <Class sourceFile="SelectionToolbar.java">
+                    org.gephi.visualization.component.SelectionToolbar$3
+                </Class>
+                <Class sourceFile="SelectionToolbar.java">
+                    org.gephi.visualization.component.SelectionToolbar$4
+                </Class>
+                <Class sourceFile="SelectionToolbar.java">
+                    org.gephi.visualization.component.SelectionToolbar$5
+                </Class>
+                <Class sourceFile="VizBarController.java">
+                    org.gephi.visualization.component.VizBarController
+                </Class>
+                <Class sourceFile="VizBarController.java">
+                    org.gephi.visualization.component.VizBarController$1
+                </Class>
+                <Class sourceFile="VizBarController.java">
+                    org.gephi.visualization.component.VizBarController$EdgeGroupBar
+                </Class>
+                <Class sourceFile="VizBarController.java">
+                    org.gephi.visualization.component.VizBarController$EdgeGroupBar$1
+                </Class>
+                <Class sourceFile="VizBarController.java">
+                    org.gephi.visualization.component.VizBarController$EdgeGroupBar$2
+                </Class>
+                <Class sourceFile="VizBarController.java">
+                    org.gephi.visualization.component.VizBarController$EdgeGroupBar$3
+                </Class>
+                <Class sourceFile="VizBarController.java">
+                    org.gephi.visualization.component.VizBarController$EdgeGroupBar$4
+                </Class>
+                <Class sourceFile="VizBarController.java">
+                    org.gephi.visualization.component.VizBarController$EdgeGroupBar$5
+                </Class>
+                <Class sourceFile="VizBarController.java">
+                    org.gephi.visualization.component.VizBarController$EdgeGroupBar$6
+                </Class>
+                <Class sourceFile="VizBarController.java">
+                    org.gephi.visualization.component.VizBarController$EdgeGroupBar$7
+                </Class>
+                <Class sourceFile="VizBarController.java">
+                    org.gephi.visualization.component.VizBarController$EdgeGroupBar$8
+                </Class>
+                <Class sourceFile="VizBarController.java">
+                    org.gephi.visualization.component.VizBarController$GlobalGroupBar
+                </Class>
+                <Class sourceFile="VizBarController.java">
+                    org.gephi.visualization.component.VizBarController$GlobalGroupBar$1
+                </Class>
+                <Class sourceFile="VizBarController.java">
+                    org.gephi.visualization.component.VizBarController$GlobalGroupBar$2
+                </Class>
+                <Class sourceFile="VizBarController.java">
+                    org.gephi.visualization.component.VizBarController$GlobalGroupBar$3
+                </Class>
+                <Class sourceFile="VizBarController.java">
+                    org.gephi.visualization.component.VizBarController$GlobalGroupBar$4
+                </Class>
+                <Class sourceFile="VizBarController.java">
+                    org.gephi.visualization.component.VizBarController$LabelGroupBar
+                </Class>
+                <Class sourceFile="VizBarController.java">
+                    org.gephi.visualization.component.VizBarController$LabelGroupBar$1
+                </Class>
+                <Class sourceFile="VizBarController.java">
+                    org.gephi.visualization.component.VizBarController$LabelGroupBar$10
+                </Class>
+                <Class sourceFile="VizBarController.java">
+                    org.gephi.visualization.component.VizBarController$LabelGroupBar$11
+                </Class>
+                <Class sourceFile="VizBarController.java">
+                    org.gephi.visualization.component.VizBarController$LabelGroupBar$2
+                </Class>
+                <Class sourceFile="VizBarController.java">
+                    org.gephi.visualization.component.VizBarController$LabelGroupBar$3
+                </Class>
+                <Class sourceFile="VizBarController.java">
+                    org.gephi.visualization.component.VizBarController$LabelGroupBar$4
+                </Class>
+                <Class sourceFile="VizBarController.java">
+                    org.gephi.visualization.component.VizBarController$LabelGroupBar$5
+                </Class>
+                <Class sourceFile="VizBarController.java">
+                    org.gephi.visualization.component.VizBarController$LabelGroupBar$6
+                </Class>
+                <Class sourceFile="VizBarController.java">
+                    org.gephi.visualization.component.VizBarController$LabelGroupBar$7
+                </Class>
+                <Class sourceFile="VizBarController.java">
+                    org.gephi.visualization.component.VizBarController$LabelGroupBar$8
+                </Class>
+                <Class sourceFile="VizBarController.java">
+                    org.gephi.visualization.component.VizBarController$LabelGroupBar$9
+                </Class>
+                <Class sourceFile="VizBarController.java">
+                    org.gephi.visualization.component.VizBarController$NodeGroupBar
+                </Class>
+                <Class sourceFile="VizBarController.java">
+                    org.gephi.visualization.component.VizBarController$NodeGroupBar$1
+                </Class>
+                <Class sourceFile="VizBarController.java">
+                    org.gephi.visualization.component.VizBarController$NodeGroupBar$2
+                </Class>
+                <Class sourceFile="VizExtendedBar.java">
+                    org.gephi.visualization.component.VizExtendedBar
+                </Class>
+                <Class sourceFile="VizToolbar.java">
+                    org.gephi.visualization.component.VizToolbar
+                </Class>
+                <Class sourceFile="VizToolbar.java">
+                    org.gephi.visualization.component.VizToolbar$1
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>com.connectina.swing.fontchooser</Package>
+                <Package>net.java.dev.colorchooser</Package>
+                <Package>net.miginfocom.swing</Package>
+                <Package>org.gephi.attribute.api</Package>
+                <Package>org.gephi.graph.api</Package>
+                <Package>org.gephi.project.api</Package>
+                <Package>org.gephi.tools.api</Package>
+                <Package>org.gephi.ui.components</Package>
+                <Package>org.gephi.ui.utils</Package>
+                <Package>org.gephi.visualization</Package>
+                <Package>org.gephi.visualization.api.initializer</Package>
+                <Package>org.gephi.visualization.api.selection</Package>
+                <Package>org.gephi.visualization.apiimpl</Package>
+                <Package>org.gephi.visualization.model</Package>
+                <Package>org.gephi.visualization.model.node</Package>
+                <Package>org.gephi.visualization.opengl</Package>
+                <Package>org.gephi.visualization.screenshot</Package>
+                <Package>org.gephi.visualization.swing</Package>
+                <Package>org.gephi.visualization.text</Package>
+                <Package>org.openide</Package>
+                <Package>org.openide.awt</Package>
+                <Package>org.openide.util</Package>
+                <Package>org.openide.windows</Package>
+            </DependsUpon>
+
+            <UsedBy>
+            </UsedBy>
+        </Package>
+
+        <Package name="org.gephi.visualization.config">
+            <Stats>
+                <TotalClasses>4</TotalClasses>
+                <ConcreteClasses>4</ConcreteClasses>
+                <AbstractClasses>0</AbstractClasses>
+                <Ca>3</Ca>
+                <Ce>3</Ce>
+                <A>0</A>
+                <I>0.5</I>
+                <D>0.5</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="GraphicalConfiguration.java">
+                    org.gephi.visualization.config.GraphicalConfiguration
+                </Class>
+                <Class sourceFile="GraphicalConfiguration.java">
+                    org.gephi.visualization.config.GraphicalConfiguration$1
+                </Class>
+                <Class sourceFile="GraphicalConfigurationException.java">
+                    org.gephi.visualization.config.GraphicalConfigurationException
+                </Class>
+                <Class sourceFile="VizCommander.java">
+                    org.gephi.visualization.config.VizCommander
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>org.gephi.visualization.swing</Package>
+                <Package>org.openide.util</Package>
+                <Package>org.openide.windows</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>org.gephi.visualization</Package>
+                <Package>org.gephi.visualization.options</Package>
+                <Package>org.gephi.visualization.swing</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="org.gephi.visualization.events">
+            <Stats>
+                <TotalClasses>5</TotalClasses>
+                <ConcreteClasses>5</ConcreteClasses>
+                <AbstractClasses>0</AbstractClasses>
+                <Ca>1</Ca>
+                <Ce>3</Ce>
+                <A>0</A>
+                <I>0.75</I>
+                <D>0.25</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="StandardVizEventManager.java">
+                    org.gephi.visualization.events.StandardVizEventManager
+                </Class>
+                <Class sourceFile="StandardVizEventManager.java">
+                    org.gephi.visualization.events.StandardVizEventManager$1
+                </Class>
+                <Class sourceFile="StandardVizEventManager.java">
+                    org.gephi.visualization.events.StandardVizEventManager$VizEventTypeHandler
+                </Class>
+                <Class sourceFile="StandardVizEventManager.java">
+                    org.gephi.visualization.events.StandardVizEventManager$VizEventTypeHandler$1
+                </Class>
+                <Class sourceFile="StandardVizEventManager.java">
+                    org.gephi.visualization.events.StandardVizEventManager$VizEventTypeHandler$2
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>org.gephi.visualization</Package>
+                <Package>org.gephi.visualization.apiimpl</Package>
+                <Package>org.gephi.visualization.opengl</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>org.gephi.visualization</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="org.gephi.visualization.model">
+            <Stats>
+                <TotalClasses>4</TotalClasses>
+                <ConcreteClasses>2</ConcreteClasses>
+                <AbstractClasses>2</AbstractClasses>
+                <Ca>9</Ca>
+                <Ce>6</Ce>
+                <A>0.5</A>
+                <I>0.4</I>
+                <D>0.1</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+                <Class sourceFile="Model.java">
+                    org.gephi.visualization.model.Model
+                </Class>
+                <Class sourceFile="TextModel.java">
+                    org.gephi.visualization.model.TextModel
+                </Class>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="ModelClass.java">
+                    org.gephi.visualization.model.ModelClass
+                </Class>
+                <Class sourceFile="ModelClassLibrary.java">
+                    org.gephi.visualization.model.ModelClassLibrary
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>org.gephi.graph.api</Package>
+                <Package>org.gephi.visualization</Package>
+                <Package>org.gephi.visualization.api.initializer</Package>
+                <Package>org.gephi.visualization.model.edge</Package>
+                <Package>org.gephi.visualization.model.node</Package>
+                <Package>org.gephi.visualization.opengl</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>org.gephi.visualization</Package>
+                <Package>org.gephi.visualization.api.initializer</Package>
+                <Package>org.gephi.visualization.bridge</Package>
+                <Package>org.gephi.visualization.component</Package>
+                <Package>org.gephi.visualization.model.edge</Package>
+                <Package>org.gephi.visualization.model.node</Package>
+                <Package>org.gephi.visualization.opengl</Package>
+                <Package>org.gephi.visualization.scheduler</Package>
+                <Package>org.gephi.visualization.text</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="org.gephi.visualization.model.edge">
+            <Stats>
+                <TotalClasses>6</TotalClasses>
+                <ConcreteClasses>5</ConcreteClasses>
+                <AbstractClasses>1</AbstractClasses>
+                <Ca>6</Ca>
+                <Ce>10</Ce>
+                <A>0.17</A>
+                <I>0.62</I>
+                <D>0.21</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+                <Class sourceFile="EdgeModel.java">
+                    org.gephi.visualization.model.edge.EdgeModel
+                </Class>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="Edge2dModel.java">
+                    org.gephi.visualization.model.edge.Edge2dModel
+                </Class>
+                <Class sourceFile="Edge3dModel.java">
+                    org.gephi.visualization.model.edge.Edge3dModel
+                </Class>
+                <Class sourceFile="EdgeModeler.java">
+                    org.gephi.visualization.model.edge.EdgeModeler
+                </Class>
+                <Class sourceFile="SelfLoop2dModel.java">
+                    org.gephi.visualization.model.edge.SelfLoop2dModel
+                </Class>
+                <Class sourceFile="SelfLoop3dModel.java">
+                    org.gephi.visualization.model.edge.SelfLoop3dModel
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>com.jogamp.common.nio</Package>
+                <Package>org.gephi.graph.api</Package>
+                <Package>org.gephi.lib.gleem.linalg</Package>
+                <Package>org.gephi.visualization</Package>
+                <Package>org.gephi.visualization.api.initializer</Package>
+                <Package>org.gephi.visualization.apiimpl</Package>
+                <Package>org.gephi.visualization.model</Package>
+                <Package>org.gephi.visualization.model.node</Package>
+                <Package>org.gephi.visualization.opengl</Package>
+                <Package>org.gephi.visualization.swing</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>org.gephi.visualization.bridge</Package>
+                <Package>org.gephi.visualization.model</Package>
+                <Package>org.gephi.visualization.model.node</Package>
+                <Package>org.gephi.visualization.octree</Package>
+                <Package>org.gephi.visualization.opengl</Package>
+                <Package>org.gephi.visualization.text</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="org.gephi.visualization.model.node">
+            <Stats>
+                <TotalClasses>8</TotalClasses>
+                <ConcreteClasses>6</ConcreteClasses>
+                <AbstractClasses>2</AbstractClasses>
+                <Ca>10</Ca>
+                <Ce>11</Ce>
+                <A>0.25</A>
+                <I>0.52</I>
+                <D>0.23</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+                <Class sourceFile="NodeModel.java">
+                    org.gephi.visualization.model.node.NodeModel
+                </Class>
+                <Class sourceFile="NodeModeler.java">
+                    org.gephi.visualization.model.node.NodeModeler
+                </Class>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="NodeDiskModel.java">
+                    org.gephi.visualization.model.node.NodeDiskModel
+                </Class>
+                <Class sourceFile="NodeDiskModeler.java">
+                    org.gephi.visualization.model.node.NodeDiskModeler
+                </Class>
+                <Class sourceFile="NodeRectangeModel.java">
+                    org.gephi.visualization.model.node.NodeRectangeModel
+                </Class>
+                <Class sourceFile="NodeRectangleModeler.java">
+                    org.gephi.visualization.model.node.NodeRectangleModeler
+                </Class>
+                <Class sourceFile="NodeSphereModel.java">
+                    org.gephi.visualization.model.node.NodeSphereModel
+                </Class>
+                <Class sourceFile="NodeSphereModeler.java">
+                    org.gephi.visualization.model.node.NodeSphereModeler
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>org.gephi.graph.api</Package>
+                <Package>org.gephi.lib.gleem.linalg</Package>
+                <Package>org.gephi.visualization</Package>
+                <Package>org.gephi.visualization.api.initializer</Package>
+                <Package>org.gephi.visualization.apiimpl</Package>
+                <Package>org.gephi.visualization.model</Package>
+                <Package>org.gephi.visualization.model.edge</Package>
+                <Package>org.gephi.visualization.octree</Package>
+                <Package>org.gephi.visualization.opengl</Package>
+                <Package>org.gephi.visualization.swing</Package>
+                <Package>org.openide.util</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>org.gephi.visualization.api.initializer</Package>
+                <Package>org.gephi.visualization.api.selection</Package>
+                <Package>org.gephi.visualization.bridge</Package>
+                <Package>org.gephi.visualization.component</Package>
+                <Package>org.gephi.visualization.model</Package>
+                <Package>org.gephi.visualization.model.edge</Package>
+                <Package>org.gephi.visualization.octree</Package>
+                <Package>org.gephi.visualization.opengl</Package>
+                <Package>org.gephi.visualization.selection</Package>
+                <Package>org.gephi.visualization.text</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="org.gephi.visualization.octree">
+            <Stats>
+                <TotalClasses>5</TotalClasses>
+                <ConcreteClasses>5</ConcreteClasses>
+                <AbstractClasses>0</AbstractClasses>
+                <Ca>4</Ca>
+                <Ce>10</Ce>
+                <A>0</A>
+                <I>0.71</I>
+                <D>0.29</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="Octant.java">
+                    org.gephi.visualization.octree.Octant
+                </Class>
+                <Class sourceFile="Octree.java">
+                    org.gephi.visualization.octree.Octree
+                </Class>
+                <Class sourceFile="Octree.java">
+                    org.gephi.visualization.octree.Octree$EdgeIterator
+                </Class>
+                <Class sourceFile="Octree.java">
+                    org.gephi.visualization.octree.Octree$OctantIterator
+                </Class>
+                <Class sourceFile="Octree.java">
+                    org.gephi.visualization.octree.Octree$SelectableIterator
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>com.jogamp.common.nio</Package>
+                <Package>com.jogamp.opengl.util.gl2</Package>
+                <Package>it.unimi.dsi.fastutil.ints</Package>
+                <Package>org.gephi.graph.api</Package>
+                <Package>org.gephi.lib.gleem.linalg</Package>
+                <Package>org.gephi.visualization</Package>
+                <Package>org.gephi.visualization.apiimpl</Package>
+                <Package>org.gephi.visualization.model.edge</Package>
+                <Package>org.gephi.visualization.model.node</Package>
+                <Package>org.gephi.visualization.swing</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>org.gephi.visualization.bridge</Package>
+                <Package>org.gephi.visualization.model.node</Package>
+                <Package>org.gephi.visualization.opengl</Package>
+                <Package>org.gephi.visualization.scheduler</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="org.gephi.visualization.opengl">
+            <Stats>
+                <TotalClasses>10</TotalClasses>
+                <ConcreteClasses>9</ConcreteClasses>
+                <AbstractClasses>1</AbstractClasses>
+                <Ca>13</Ca>
+                <Ce>19</Ce>
+                <A>0.1</A>
+                <I>0.59</I>
+                <D>0.31</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+                <Class sourceFile="AbstractEngine.java">
+                    org.gephi.visualization.opengl.AbstractEngine
+                </Class>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="AbstractEngine.java">
+                    org.gephi.visualization.opengl.AbstractEngine$1
+                </Class>
+                <Class sourceFile="AbstractEngine.java">
+                    org.gephi.visualization.opengl.AbstractEngine$EngineLifeCycle
+                </Class>
+                <Class sourceFile="AbstractEngine.java">
+                    org.gephi.visualization.opengl.AbstractEngine$Limits
+                </Class>
+                <Class sourceFile="CompatibilityEngine.java">
+                    org.gephi.visualization.opengl.CompatibilityEngine
+                </Class>
+                <Class sourceFile="JOGLNativesInstaller.java">
+                    org.gephi.visualization.opengl.JOGLNativesInstaller
+                </Class>
+                <Class sourceFile="JOGLNativesInstaller.java">
+                    org.gephi.visualization.opengl.JOGLNativesInstaller$1
+                </Class>
+                <Class sourceFile="JOGLNativesInstaller.java">
+                    org.gephi.visualization.opengl.JOGLNativesInstaller$NativeLibInfo
+                </Class>
+                <Class sourceFile="Lighting.java">
+                    org.gephi.visualization.opengl.Lighting
+                </Class>
+                <Class sourceFile="Lighting.java">
+                    org.gephi.visualization.opengl.Lighting$Light
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>org.gephi.graph.api</Package>
+                <Package>org.gephi.lib.gleem.linalg</Package>
+                <Package>org.gephi.ui.utils</Package>
+                <Package>org.gephi.visualization</Package>
+                <Package>org.gephi.visualization.api.initializer</Package>
+                <Package>org.gephi.visualization.api.selection</Package>
+                <Package>org.gephi.visualization.apiimpl</Package>
+                <Package>org.gephi.visualization.bridge</Package>
+                <Package>org.gephi.visualization.model</Package>
+                <Package>org.gephi.visualization.model.edge</Package>
+                <Package>org.gephi.visualization.model.node</Package>
+                <Package>org.gephi.visualization.octree</Package>
+                <Package>org.gephi.visualization.scheduler</Package>
+                <Package>org.gephi.visualization.selection</Package>
+                <Package>org.gephi.visualization.swing</Package>
+                <Package>org.gephi.visualization.text</Package>
+                <Package>org.openide</Package>
+                <Package>org.openide.modules</Package>
+                <Package>org.openide.util</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>org.gephi.visualization</Package>
+                <Package>org.gephi.visualization.api.initializer</Package>
+                <Package>org.gephi.visualization.api.selection</Package>
+                <Package>org.gephi.visualization.bridge</Package>
+                <Package>org.gephi.visualization.component</Package>
+                <Package>org.gephi.visualization.events</Package>
+                <Package>org.gephi.visualization.model</Package>
+                <Package>org.gephi.visualization.model.edge</Package>
+                <Package>org.gephi.visualization.model.node</Package>
+                <Package>org.gephi.visualization.options</Package>
+                <Package>org.gephi.visualization.scheduler</Package>
+                <Package>org.gephi.visualization.screenshot</Package>
+                <Package>org.gephi.visualization.swing</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="org.gephi.visualization.options">
+            <Stats>
+                <TotalClasses>9</TotalClasses>
+                <ConcreteClasses>9</ConcreteClasses>
+                <AbstractClasses>0</AbstractClasses>
+                <Ca>0</Ca>
+                <Ce>14</Ce>
+                <A>0</A>
+                <I>1</I>
+                <D>0</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="DefaultOptionsPanelController.java">
+                    org.gephi.visualization.options.DefaultOptionsPanelController
+                </Class>
+                <Class sourceFile="DefaultPanel.java">
+                    org.gephi.visualization.options.DefaultPanel
+                </Class>
+                <Class sourceFile="DefaultPanel.java">
+                    org.gephi.visualization.options.DefaultPanel$1
+                </Class>
+                <Class sourceFile="DefaultPanel.java">
+                    org.gephi.visualization.options.DefaultPanel$2
+                </Class>
+                <Class sourceFile="DefaultPanel.java">
+                    org.gephi.visualization.options.DefaultPanel$3
+                </Class>
+                <Class sourceFile="OpenGLOptionsPanelController.java">
+                    org.gephi.visualization.options.OpenGLOptionsPanelController
+                </Class>
+                <Class sourceFile="OpenGLPanel.java">
+                    org.gephi.visualization.options.OpenGLPanel
+                </Class>
+                <Class sourceFile="OpenGLPanel.java">
+                    org.gephi.visualization.options.OpenGLPanel$1
+                </Class>
+                <Class sourceFile="OpenGLPanel.java">
+                    org.gephi.visualization.options.OpenGLPanel$2
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>com.connectina.swing.fontchooser</Package>
+                <Package>net.java.dev.colorchooser</Package>
+                <Package>org.gephi.ui.components</Package>
+                <Package>org.gephi.ui.utils</Package>
+                <Package>org.gephi.visualization</Package>
+                <Package>org.gephi.visualization.apiimpl</Package>
+                <Package>org.gephi.visualization.config</Package>
+                <Package>org.gephi.visualization.opengl</Package>
+                <Package>org.gephi.visualization.swing</Package>
+                <Package>org.jdesktop.swingx</Package>
+                <Package>org.netbeans.spi.options</Package>
+                <Package>org.openide.awt</Package>
+                <Package>org.openide.util</Package>
+                <Package>org.openide.windows</Package>
+            </DependsUpon>
+
+            <UsedBy>
+            </UsedBy>
+        </Package>
+
+        <Package name="org.gephi.visualization.scheduler">
+            <Stats>
+                <TotalClasses>5</TotalClasses>
+                <ConcreteClasses>4</ConcreteClasses>
+                <AbstractClasses>1</AbstractClasses>
+                <Ca>2</Ca>
+                <Ce>6</Ce>
+                <A>0.2</A>
+                <I>0.75</I>
+                <D>0.05</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+                <Class sourceFile="AbstractAnimator.java">
+                    org.gephi.visualization.scheduler.AbstractAnimator
+                </Class>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="BasicFPSAnimator.java">
+                    org.gephi.visualization.scheduler.BasicFPSAnimator
+                </Class>
+                <Class sourceFile="CompatibilityScheduler.java">
+                    org.gephi.visualization.scheduler.CompatibilityScheduler
+                </Class>
+                <Class sourceFile="CompatibilityScheduler.java">
+                    org.gephi.visualization.scheduler.CompatibilityScheduler$1
+                </Class>
+                <Class sourceFile="CompatibilityScheduler.java">
+                    org.gephi.visualization.scheduler.CompatibilityScheduler$2
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>org.gephi.visualization</Package>
+                <Package>org.gephi.visualization.apiimpl</Package>
+                <Package>org.gephi.visualization.model</Package>
+                <Package>org.gephi.visualization.octree</Package>
+                <Package>org.gephi.visualization.opengl</Package>
+                <Package>org.gephi.visualization.swing</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>org.gephi.visualization</Package>
+                <Package>org.gephi.visualization.opengl</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="org.gephi.visualization.screenshot">
+            <Stats>
+                <TotalClasses>7</TotalClasses>
+                <ConcreteClasses>7</ConcreteClasses>
+                <AbstractClasses>0</AbstractClasses>
+                <Ca>3</Ca>
+                <Ce>13</Ce>
+                <A>0</A>
+                <I>0.81</I>
+                <D>0.19</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="ScreenshotMaker.java">
+                    org.gephi.visualization.screenshot.ScreenshotMaker
+                </Class>
+                <Class sourceFile="ScreenshotMaker.java">
+                    org.gephi.visualization.screenshot.ScreenshotMaker$1
+                </Class>
+                <Class sourceFile="ScreenshotMaker.java">
+                    org.gephi.visualization.screenshot.ScreenshotMaker$2
+                </Class>
+                <Class sourceFile="ScreenshotSettingsPanel.java">
+                    org.gephi.visualization.screenshot.ScreenshotSettingsPanel
+                </Class>
+                <Class sourceFile="ScreenshotSettingsPanel.java">
+                    org.gephi.visualization.screenshot.ScreenshotSettingsPanel$1
+                </Class>
+                <Class sourceFile="ScreenshotSettingsPanel.java">
+                    org.gephi.visualization.screenshot.ScreenshotSettingsPanel$2
+                </Class>
+                <Class sourceFile="TileRenderer.java">
+                    org.gephi.visualization.screenshot.TileRenderer
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>com.jogamp.opengl.util.awt</Package>
+                <Package>org.gephi.lib.validation</Package>
+                <Package>org.gephi.ui.utils</Package>
+                <Package>org.gephi.visualization</Package>
+                <Package>org.gephi.visualization.apiimpl</Package>
+                <Package>org.gephi.visualization.opengl</Package>
+                <Package>org.gephi.visualization.swing</Package>
+                <Package>org.gephi.visualization.text</Package>
+                <Package>org.netbeans.validation.api</Package>
+                <Package>org.netbeans.validation.api.builtin</Package>
+                <Package>org.netbeans.validation.api.ui</Package>
+                <Package>org.openide.util</Package>
+                <Package>org.openide.windows</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>org.gephi.visualization</Package>
+                <Package>org.gephi.visualization.component</Package>
+                <Package>org.gephi.visualization.swing</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="org.gephi.visualization.selection">
+            <Stats>
+                <TotalClasses>2</TotalClasses>
+                <ConcreteClasses>2</ConcreteClasses>
+                <AbstractClasses>0</AbstractClasses>
+                <Ca>2</Ca>
+                <Ce>5</Ce>
+                <A>0</A>
+                <I>0.71</I>
+                <D>0.29</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="Cylinder.java">
+                    org.gephi.visualization.selection.Cylinder
+                </Class>
+                <Class sourceFile="Rectangle.java">
+                    org.gephi.visualization.selection.Rectangle
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>org.gephi.lib.gleem.linalg</Package>
+                <Package>org.gephi.visualization</Package>
+                <Package>org.gephi.visualization.api.selection</Package>
+                <Package>org.gephi.visualization.apiimpl</Package>
+                <Package>org.gephi.visualization.model.node</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>org.gephi.visualization.opengl</Package>
+                <Package>org.gephi.visualization.swing</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="org.gephi.visualization.spi">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.gephi.visualization.swing">
+            <Stats>
+                <TotalClasses>9</TotalClasses>
+                <ConcreteClasses>8</ConcreteClasses>
+                <AbstractClasses>1</AbstractClasses>
+                <Ca>11</Ca>
+                <Ce>13</Ce>
+                <A>0.11</A>
+                <I>0.54</I>
+                <D>0.35</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+                <Class sourceFile="GLAbstractListener.java">
+                    org.gephi.visualization.swing.GLAbstractListener
+                </Class>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="GraphCanvas.java">
+                    org.gephi.visualization.swing.GraphCanvas
+                </Class>
+                <Class sourceFile="GraphDrawableImpl.java">
+                    org.gephi.visualization.swing.GraphDrawableImpl
+                </Class>
+                <Class sourceFile="GraphDrawableImpl.java">
+                    org.gephi.visualization.swing.GraphDrawableImpl$1
+                </Class>
+                <Class sourceFile="GraphDrawableImpl.java">
+                    org.gephi.visualization.swing.GraphDrawableImpl$2
+                </Class>
+                <Class sourceFile="GraphPanel.java">
+                    org.gephi.visualization.swing.GraphPanel
+                </Class>
+                <Class sourceFile="GraphPanel.java">
+                    org.gephi.visualization.swing.GraphPanel$1
+                </Class>
+                <Class sourceFile="NewtGraphCanvas.java">
+                    org.gephi.visualization.swing.NewtGraphCanvas
+                </Class>
+                <Class sourceFile="StandardGraphIO.java">
+                    org.gephi.visualization.swing.StandardGraphIO
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>com.jogamp.common.nio</Package>
+                <Package>com.jogamp.newt.awt</Package>
+                <Package>com.jogamp.newt.opengl</Package>
+                <Package>com.jogamp.opengl.util.gl2</Package>
+                <Package>org.gephi.lib.gleem.linalg</Package>
+                <Package>org.gephi.visualization</Package>
+                <Package>org.gephi.visualization.api.selection</Package>
+                <Package>org.gephi.visualization.apiimpl</Package>
+                <Package>org.gephi.visualization.config</Package>
+                <Package>org.gephi.visualization.opengl</Package>
+                <Package>org.gephi.visualization.screenshot</Package>
+                <Package>org.gephi.visualization.selection</Package>
+                <Package>org.openide.util</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>org.gephi.visualization</Package>
+                <Package>org.gephi.visualization.api.initializer</Package>
+                <Package>org.gephi.visualization.component</Package>
+                <Package>org.gephi.visualization.config</Package>
+                <Package>org.gephi.visualization.model.edge</Package>
+                <Package>org.gephi.visualization.model.node</Package>
+                <Package>org.gephi.visualization.octree</Package>
+                <Package>org.gephi.visualization.opengl</Package>
+                <Package>org.gephi.visualization.options</Package>
+                <Package>org.gephi.visualization.scheduler</Package>
+                <Package>org.gephi.visualization.screenshot</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="org.gephi.visualization.text">
+            <Stats>
+                <TotalClasses>14</TotalClasses>
+                <ConcreteClasses>11</ConcreteClasses>
+                <AbstractClasses>3</AbstractClasses>
+                <Ca>4</Ca>
+                <Ce>11</Ce>
+                <A>0.21</A>
+                <I>0.73</I>
+                <D>0.05</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+                <Class sourceFile="ColorMode.java">
+                    org.gephi.visualization.text.ColorMode
+                </Class>
+                <Class sourceFile="SizeMode.java">
+                    org.gephi.visualization.text.SizeMode
+                </Class>
+                <Class sourceFile="TextManager.java">
+                    org.gephi.visualization.text.TextManager$Renderer
+                </Class>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="FixedSizeMode.java">
+                    org.gephi.visualization.text.FixedSizeMode
+                </Class>
+                <Class sourceFile="ObjectColorMode.java">
+                    org.gephi.visualization.text.ObjectColorMode
+                </Class>
+                <Class sourceFile="ProportionalSizeMode.java">
+                    org.gephi.visualization.text.ProportionalSizeMode
+                </Class>
+                <Class sourceFile="ScaledSizeMode.java">
+                    org.gephi.visualization.text.ScaledSizeMode
+                </Class>
+                <Class sourceFile="TextManager.java">
+                    org.gephi.visualization.text.TextManager
+                </Class>
+                <Class sourceFile="TextManager.java">
+                    org.gephi.visualization.text.TextManager$1
+                </Class>
+                <Class sourceFile="TextManager.java">
+                    org.gephi.visualization.text.TextManager$2
+                </Class>
+                <Class sourceFile="TextManager.java">
+                    org.gephi.visualization.text.TextManager$Renderer2D
+                </Class>
+                <Class sourceFile="TextManager.java">
+                    org.gephi.visualization.text.TextManager$Renderer3D
+                </Class>
+                <Class sourceFile="TextModelImpl.java">
+                    org.gephi.visualization.text.TextModelImpl
+                </Class>
+                <Class sourceFile="UniqueColorMode.java">
+                    org.gephi.visualization.text.UniqueColorMode
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>com.jogamp.opengl.util.awt</Package>
+                <Package>org.gephi.attribute.api</Package>
+                <Package>org.gephi.graph.api</Package>
+                <Package>org.gephi.project.api</Package>
+                <Package>org.gephi.ui.utils</Package>
+                <Package>org.gephi.visualization</Package>
+                <Package>org.gephi.visualization.apiimpl</Package>
+                <Package>org.gephi.visualization.model</Package>
+                <Package>org.gephi.visualization.model.edge</Package>
+                <Package>org.gephi.visualization.model.node</Package>
+                <Package>org.openide.util</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>org.gephi.visualization</Package>
+                <Package>org.gephi.visualization.component</Package>
+                <Package>org.gephi.visualization.opengl</Package>
+                <Package>org.gephi.visualization.screenshot</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="org.jdesktop.swingx">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.netbeans.spi.options">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.netbeans.validation.api">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.netbeans.validation.api.builtin">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.netbeans.validation.api.ui">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.openide">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.openide.awt">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.openide.modules">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.openide.util">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.openide.windows">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+    </Packages>
+
+    <Cycles>
+        <Package Name="org.gephi.visualization">
+            <Package>org.gephi.visualization.opengl</Package>
+            <Package>org.gephi.visualization.model</Package>
+            <Package>org.gephi.visualization</Package>
+        </Package>
+
+        <Package Name="org.gephi.visualization.api.initializer">
+            <Package>org.gephi.visualization.apiimpl</Package>
+            <Package>org.gephi.visualization</Package>
+            <Package>org.gephi.visualization.opengl</Package>
+            <Package>org.gephi.visualization.model</Package>
+            <Package>org.gephi.visualization</Package>
+        </Package>
+
+        <Package Name="org.gephi.visualization.api.selection">
+            <Package>org.gephi.visualization.model.node</Package>
+            <Package>org.gephi.visualization.apiimpl</Package>
+            <Package>org.gephi.visualization</Package>
+            <Package>org.gephi.visualization.opengl</Package>
+            <Package>org.gephi.visualization.model</Package>
+            <Package>org.gephi.visualization</Package>
+        </Package>
+
+        <Package Name="org.gephi.visualization.apiimpl">
+            <Package>org.gephi.visualization</Package>
+            <Package>org.gephi.visualization.opengl</Package>
+            <Package>org.gephi.visualization.model</Package>
+            <Package>org.gephi.visualization</Package>
+        </Package>
+
+        <Package Name="org.gephi.visualization.bridge">
+            <Package>org.gephi.visualization.apiimpl</Package>
+            <Package>org.gephi.visualization</Package>
+            <Package>org.gephi.visualization.opengl</Package>
+            <Package>org.gephi.visualization.model</Package>
+            <Package>org.gephi.visualization</Package>
+        </Package>
+
+        <Package Name="org.gephi.visualization.component">
+            <Package>org.gephi.visualization.apiimpl</Package>
+            <Package>org.gephi.visualization</Package>
+            <Package>org.gephi.visualization.opengl</Package>
+            <Package>org.gephi.visualization.model</Package>
+            <Package>org.gephi.visualization</Package>
+        </Package>
+
+        <Package Name="org.gephi.visualization.config">
+            <Package>org.gephi.visualization.swing</Package>
+            <Package>org.gephi.visualization.apiimpl</Package>
+            <Package>org.gephi.visualization</Package>
+            <Package>org.gephi.visualization.opengl</Package>
+            <Package>org.gephi.visualization.model</Package>
+            <Package>org.gephi.visualization</Package>
+        </Package>
+
+        <Package Name="org.gephi.visualization.events">
+            <Package>org.gephi.visualization.apiimpl</Package>
+            <Package>org.gephi.visualization</Package>
+            <Package>org.gephi.visualization.opengl</Package>
+            <Package>org.gephi.visualization.model</Package>
+            <Package>org.gephi.visualization</Package>
+        </Package>
+
+        <Package Name="org.gephi.visualization.model">
+            <Package>org.gephi.visualization</Package>
+            <Package>org.gephi.visualization.opengl</Package>
+            <Package>org.gephi.visualization.model</Package>
+        </Package>
+
+        <Package Name="org.gephi.visualization.model.edge">
+            <Package>org.gephi.visualization.apiimpl</Package>
+            <Package>org.gephi.visualization</Package>
+            <Package>org.gephi.visualization.opengl</Package>
+            <Package>org.gephi.visualization.model</Package>
+            <Package>org.gephi.visualization</Package>
+        </Package>
+
+        <Package Name="org.gephi.visualization.model.node">
+            <Package>org.gephi.visualization.apiimpl</Package>
+            <Package>org.gephi.visualization</Package>
+            <Package>org.gephi.visualization.opengl</Package>
+            <Package>org.gephi.visualization.model</Package>
+            <Package>org.gephi.visualization</Package>
+        </Package>
+
+        <Package Name="org.gephi.visualization.octree">
+            <Package>org.gephi.visualization.model.node</Package>
+            <Package>org.gephi.visualization.apiimpl</Package>
+            <Package>org.gephi.visualization</Package>
+            <Package>org.gephi.visualization.opengl</Package>
+            <Package>org.gephi.visualization.model</Package>
+            <Package>org.gephi.visualization</Package>
+        </Package>
+
+        <Package Name="org.gephi.visualization.opengl">
+            <Package>org.gephi.visualization.model</Package>
+            <Package>org.gephi.visualization</Package>
+            <Package>org.gephi.visualization.opengl</Package>
+        </Package>
+
+        <Package Name="org.gephi.visualization.options">
+            <Package>org.gephi.visualization.apiimpl</Package>
+            <Package>org.gephi.visualization</Package>
+            <Package>org.gephi.visualization.opengl</Package>
+            <Package>org.gephi.visualization.model</Package>
+            <Package>org.gephi.visualization</Package>
+        </Package>
+
+        <Package Name="org.gephi.visualization.scheduler">
+            <Package>org.gephi.visualization.swing</Package>
+            <Package>org.gephi.visualization.apiimpl</Package>
+            <Package>org.gephi.visualization</Package>
+            <Package>org.gephi.visualization.opengl</Package>
+            <Package>org.gephi.visualization.model</Package>
+            <Package>org.gephi.visualization</Package>
+        </Package>
+
+        <Package Name="org.gephi.visualization.screenshot">
+            <Package>org.gephi.visualization.apiimpl</Package>
+            <Package>org.gephi.visualization</Package>
+            <Package>org.gephi.visualization.opengl</Package>
+            <Package>org.gephi.visualization.model</Package>
+            <Package>org.gephi.visualization</Package>
+        </Package>
+
+        <Package Name="org.gephi.visualization.selection">
+            <Package>org.gephi.visualization.apiimpl</Package>
+            <Package>org.gephi.visualization</Package>
+            <Package>org.gephi.visualization.opengl</Package>
+            <Package>org.gephi.visualization.model</Package>
+            <Package>org.gephi.visualization</Package>
+        </Package>
+
+        <Package Name="org.gephi.visualization.swing">
+            <Package>org.gephi.visualization.apiimpl</Package>
+            <Package>org.gephi.visualization</Package>
+            <Package>org.gephi.visualization.opengl</Package>
+            <Package>org.gephi.visualization.model</Package>
+            <Package>org.gephi.visualization</Package>
+        </Package>
+
+        <Package Name="org.gephi.visualization.text">
+            <Package>org.gephi.visualization.model.node</Package>
+            <Package>org.gephi.visualization.apiimpl</Package>
+            <Package>org.gephi.visualization</Package>
+            <Package>org.gephi.visualization.opengl</Package>
+            <Package>org.gephi.visualization.model</Package>
+            <Package>org.gephi.visualization</Package>
+        </Package>
+
+    </Cycles>
+</JDepend>
