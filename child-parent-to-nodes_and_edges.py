@@ -1,34 +1,32 @@
 ####################################################################################################
-# Python file to be used in gephi. It reads in JDepend XML Files and creates Nodes and Edges from it
+# Python file to be used in gephi. It creates Edges from Nodes based on node attributes, 
+# i.e. child-parent-relations
 # (c) 2013 - 2014  Peter Huber, Munich
 # 
 # You can use this script as is or modify it and redistribute. Redistributing original or
-# changed version is only allowed with giveing reference to the original author
+# changed version is only allowed with giving credits to the original author
 ####################################################################################################
-# START WITH: execfile("<your path to file>/jdepend-xml-to-nodes_and_edges.py")
+# START WITH: execfile("<your path to file>/child-parent-to-nodes_and_edges.py")
 #
 # Read about Python, german only: http://openbook.galileocomputing.de/python/python_kapitel_08_003.htm#mjfb4d02fccab9edcdc5ad084f35eaeaa6
 #
-import xml.dom.minidom as dom
 import sys
 import inspect
 
-## CONFIGURATION
-## 1.) Input file
-cfg_yourJDependInputFile = "<your path to file>/examples/junit/jdepend-on-junit.xml"
-## 2.) Common Package, will be stripped of node lables to make them better readable
-## The real package name will be kept in the node attribute "package"
-cfg_stripCommonBasePackage = ""
+## CONFIGURATION-SECTION
+## 
+cfg_nameIDAttribute = "rid"
+cfg_nameParentIDAttribute = "parent_rid"
 
 #
 # Accessors for ChildNodeID 
 def accessorNodeID(gephiNode):
-	return gephiNode.__findattr_ex__("rid")
+	return gephiNode.__findattr_ex__(cfg_nameIDAttribute)
 
 #
 # Accessor for ParentNodeID	
 def accessorParentNodeID(gephiNode):
-	return gephiNode.__findattr_ex__("parent_rid") 
+	return gephiNode.__findattr_ex__(cfg_nameParentIDAttribute) 
 
 #	
 #splits up a list of parentIDs as obtained by accessorParentNodeID
@@ -45,11 +43,12 @@ def buildIndex(indexFunct):
 	gephiNodesIndex = {}
 	
 	#prepare node value
-	#"inactive" will be set for all "double nodes" which
+	#"active" = false will finally be set for all "double nodes" which
 	#are infact only a edge definition, i.e. node is twice or more
-	#in list, because a specific node n has more than one parent
+	#in node list, because a specific node n has more than one parent
+	#and the parent node attribute is only single valued
 	for node in g.nodes:
-		node.inactive = False
+		node.active = True
 	
 	for node in g.nodes:
 		indexKeyValue = indexFunct(node)
@@ -59,7 +58,7 @@ def buildIndex(indexFunct):
 		if not gephiNodesIndex.has_key(indexKeyValue):
 			gephiNodesIndex[indexKeyValue] = node
 		else:
-			node.inactive = True
+			node.active = False
 	return gephiNodesIndex
 
 #
@@ -95,9 +94,13 @@ def removeDoubleNodes(gephiNodeIndex):
 	#for node in deleteList:
 	#	g.nodes.remove(node)
 
-def postProcessNodes()
+def postProcessNodes():
 	for n in g.nodes: 
-		n.size = 2 + n.degree*0.2
+		if 0==n.degree:
+			n.active = False
+		else:
+			n.size = 2 + n.degree*0.2
+		
 	
 #########################################################################################
 # MAIN FUNCTION
