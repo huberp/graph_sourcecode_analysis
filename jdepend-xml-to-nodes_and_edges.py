@@ -14,8 +14,8 @@ import sys
 
 ## CONFIGURATION
 ## 1.) Input file
-cfg_yourJDependInputFile = "<your path to file>/examples/junit/jdepend-on-junit.xml"
-
+#cfg_yourJDependInputFile = "<your path to file>/examples/junit/jdepend-on-junit.xml"
+cfg_yourJDependInputFile = "D:/Eigene Dateien/Documents/LEARNING/COURSERA/Data Science Specialization/graph_sourcecode_analysis/examples/junit/jdepend-on-junit.xml"
 ## 2.) Common Package, will be stripped of node lables to make them better readable
 ## The real package name will be kept in the node attribute "package"
 cfg_stripCommonBasePackage = ["org.junit.","junit."]
@@ -26,17 +26,17 @@ cfg_stripCommonBasePackage = ["org.junit.","junit."]
  #
 def checkOrAddCycle(gephiNode, cycleNumber):
 	packageTag = ("<%d>" % (cycleNumber))
-	currentCycles = gephiNode.javaCylces
+	currentCycles = gephiNode.javaCycles
 	if currentCycles.find(packageTag) == -1:
-		gephiNode.javaCylces=currentCycles+packageTag
+		gephiNode.javaCycles=currentCycles+packageTag
 		gephiNode.javaCyclesNumber = gephiNode.javaCyclesNumber+1
-		print gephiNode.javaCylces
+		print gephiNode.javaCycles
  
 def fctPass4HandleCycles(cyclesXMLElem, gephiNodesByPackageLabel):
 	#first prepare all "cycles" variables on the nodes
 	#if this is left out, some values won't be set correctly
 	for node in gephiNodesByPackageLabel.values(): 
-		node.javaCylces = ""
+		node.javaCycles = ""
 		node.javaCyclesNumber = 0
 		
 	i = 0;
@@ -121,9 +121,25 @@ def fctPass1ReadPackageCreateNodes(packagesXMLElem):
 			nuGephiNode = g.addNode(label=gephiNodeLabel,color=blue, size=5.0)
 			#add the full name of the package as a separate column
 			nuGephiNode.package = gephiNodeNameFull
+			fctAddStats(xmlElem, nuGephiNode)
 			gephiNodesByPackage[gephiNodeNameFull] = nuGephiNode
 	return gephiNodesByPackage	
 
+#
+# Add statistics per package
+# xmlElem points to a <package> element of JDepend file
+# nuGephiNode points to the newly created gephi node which
+# corresponds to the xmlElem
+#	
+def fctAddStats(packageXmlElem, nuGephiNode):
+	#loop though just on element
+	for statsXmlNode in packageXmlElem.getElementsByTagName('Stats'):
+		for xmlElem in statsXmlNode.childNodes:
+			if not xmlElem.nodeType==dom.Node.ELEMENT_NODE:
+				continue
+			print "Attribute %s = %f" % (xmlElem.nodeName,float(xmlElem.firstChild.nodeValue))
+			nuGephiNode.__setattr__(xmlElem.nodeName,float(xmlElem.firstChild.nodeValue))
+	
 	#
 	# Use a Package name as coming from the JDepend-File
 	# Strip of a common base Package, given by the String cfg_stripCommonBasePackage
@@ -137,11 +153,23 @@ def fctStrippedNodeName(originalPackageName):
 	
 	return originalPackageName
 
+	
+#
+# very simple layout based on Instabilty/Abstractnes values
+#	
+def fctIALayout():
+	for n in g.nodes:
+		if not (n.I == None or n.A==None):
+			n.x = n.I * 800.0
+			n.y = n.A * 800.0
+		else:
+			n.x = 400.0
+			n.y = 400.0
 		
-    #
-	# MAIN FUNCTION
-	# Running all the different Passes
-	#
+#
+# MAIN FUNCTION
+# Running all the different Passes
+#
 def main():
 
 	#now parse the xml 
@@ -164,6 +192,10 @@ def main():
 	#
 	cyclesElement  = jdependDOM.childNodes.item(0).childNodes.item(3)
 	fctPass4HandleCycles(cyclesElement, gephiNodesByPackageLabel)
+	
+	# Lyout
+	#
+	fctIALayout()
 	
 	# Paths - Floyd Warshall
 	#
