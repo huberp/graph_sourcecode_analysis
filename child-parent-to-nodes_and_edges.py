@@ -15,13 +15,15 @@ import inspect
 
 ## CONFIGURATION-SECTION
 ## 
-cfg_nameIDAttribute = "rid"
-cfg_nameParentIDAttribute = "parent_rid"
-
+#cfg_nameIDAttribute = "rid"
+#cfg_nameParentIDAttribute = "parent_rid"
+cfg_nameIDAttribute = "nid"
+cfg_nameParentIDAttribute = "parent"
 #
 # Accessors for ChildNodeID 
 def accessorNodeID(gephiNode):
-	return gephiNode.__findattr_ex__(cfg_nameIDAttribute)
+	#coerce every thing to string in order to be safe later when using parent_id lists
+	return str(gephiNode.__findattr_ex__(cfg_nameIDAttribute))
 
 #
 # Accessor for ParentNodeID	
@@ -57,6 +59,7 @@ def buildIndex(indexFunct):
 		#like a node with a indexID has two lines which are used to define two edges
 		if not gephiNodesIndex.has_key(indexKeyValue):
 			gephiNodesIndex[indexKeyValue] = node
+			#print "Mapped '%s' (%s)" % ( indexKeyValue, type(indexKeyValue) )
 		else:
 			node.active = False
 	return gephiNodesIndex
@@ -74,15 +77,18 @@ def buildEdges(gephiNodeIndex, indexFunct, parentIndexFunct):
 			#print indexKeyValue, parentIndexKeyValue
 			#print "ID %s -> ParentID %s" % (indexKeyValue, parentIndexKeyValue)
 			if indexKeyValue!=None and parentIndexKeyValue!=None:
-				if gephiNodeIndex.has_key(indexKeyValue) and gephiNodeIndex.has_key(parentIndexKeyValue):
-					nuEdge = g.addDirectedEdge(gephiNodeIndex[indexKeyValue], gephiNodeIndex[parentIndexKeyValue])
+				strParentIndexKeyValue = str(parentIndexKeyValue)
+				if not gephiNodeIndex.has_key(indexKeyValue):
+					print "NodeIndex value has no node mapped '%s'" % (indexKeyValue)
+				if not gephiNodeIndex.has_key(strParentIndexKeyValue):
+					print "ParentIndex value has no node mapped '%s' (%s)" % (strParentIndexKeyValue, type(strParentIndexKeyValue))
+				if gephiNodeIndex.has_key(indexKeyValue) and gephiNodeIndex.has_key(strParentIndexKeyValue):
+					nuEdge = g.addDirectedEdge(gephiNodeIndex[indexKeyValue], gephiNodeIndex[strParentIndexKeyValue])
 					#if nuEdge == None:
 					#	print "%s -> %s" % (indexKeyValue, parentIndexKeyValue)
-					lableValue = "%s -> %s" % (indexKeyValue, parentIndexKeyValue)
-					accessEdge = gephiNodeIndex[indexKeyValue] -> gephiNodeIndex[parentIndexKeyValue]
+					lableValue = "%s -> %s" % (indexKeyValue, strParentIndexKeyValue)
+					accessEdge = gephiNodeIndex[indexKeyValue] -> gephiNodeIndex[strParentIndexKeyValue]
 					accessEdge.label = lableValue
-				else:
-					print "Some index value has no node mapped %s %s" % (indexKeyValue, parentIndexKeyValue)
 
 
 def removeDoubleNodes(gephiNodeIndex):

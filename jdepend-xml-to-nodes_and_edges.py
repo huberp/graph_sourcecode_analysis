@@ -15,9 +15,10 @@ import sys
 ## CONFIGURATION
 ## 1.) Input file
 cfg_yourJDependInputFile = "<your path to file>/examples/junit/jdepend-on-junit.xml"
+
 ## 2.) Common Package, will be stripped of node lables to make them better readable
 ## The real package name will be kept in the node attribute "package"
-cfg_stripCommonBasePackage = ""
+cfg_stripCommonBasePackage = ["org.junit.","junit."]
  
  #
  # PASS 4: Handle Cycles
@@ -38,17 +39,16 @@ def fctPass4HandleCycles(cyclesXMLElem, gephiNodesByPackageLabel):
 		node.javaCylces = ""
 		node.javaCyclesNumber = 0
 		
-		
 	i = 0;
 	for xmlElem in cyclesXMLElem.childNodes: 
 		if xmlElem.nodeType==dom.Node.ELEMENT_NODE and xmlElem.nodeName=="Package":
-			currentGephiNodeName = fctStrippedNodeName(xmlElem.getAttribute("Name"))
+			currentGephiNodeName = xmlElem.getAttribute("Name")
 			currentPackageGephiNode = gephiNodesByPackageLabel[currentGephiNodeName]
 			checkOrAddCycle(currentPackageGephiNode,i)
 			cycleMembersXMLElems = xmlElem.getElementsByTagName("Package")
 			if(len(cycleMembersXMLElems) != 0):
 				for memberXMLElem in cycleMembersXMLElems:
-					memberPackageName = fctStrippedNodeName(memberXMLElem.childNodes.item(0).data)
+					memberPackageName = memberXMLElem.childNodes.item(0).data
 					memberPackageGephiNode = gephiNodesByPackageLabel[memberPackageName]
 					print "Cycle %d, member: %s" % (i, memberPackageName)
 					checkOrAddCycle(memberPackageGephiNode,i)
@@ -77,11 +77,11 @@ def fctPass3ResizeNodesByIndegree(gephiNodesByPackageLabel):
  # PASS 2: Go over all Package-Elements and read their "DependsUpon"
  # We need this for later wiring dependencies thru edges
  #
-def fctPass2ReadDependsOnCreateEdges(packagesXMLElem, gephiNodesByPackageLabel):
+def fctPass2ReadDependsOnCreateEdges(packagesXMLElem, gephiNodesByPackage):
 	for xmlElem in packagesXMLElem.childNodes: 
 		if xmlElem.nodeType==dom.Node.ELEMENT_NODE and xmlElem.nodeName=="Package":
-			thisGephiNodeName = fctStrippedNodeName(xmlElem.getAttribute("name"))
-			thisPackageGephiNode = gephiNodesByPackageLabel[thisGephiNodeName]
+			thisGephiNodeName = xmlElem.getAttribute("name")
+			thisPackageGephiNode = gephiNodesByPackage[thisGephiNodeName]
 			###getElementsByTagName works here because there's ONLY one single DependsUpon
 			###per Package elem, whereas there are Package Elems wrapped in Package Elems...;-(
 			theSingleDependsUponXMLElem = xmlElem.getElementsByTagName("DependsUpon")
@@ -90,33 +90,39 @@ def fctPass2ReadDependsOnCreateEdges(packagesXMLElem, gephiNodesByPackageLabel):
 				theDepPackages= theSingleDependsUponXMLElem.item(0).getElementsByTagName("Package")
 				for depPackageXMLElem in theDepPackages:
 					#oh, wow, this DOM-API is really some kind of deep nested ;-)
-					otherGephiNodeName = fctStrippedNodeName(depPackageXMLElem.childNodes.item(0).data)
-					otherPackageGephiNode = gephiNodesByPackageLabel[otherGephiNodeName]
+					otherGephiNodeName = depPackageXMLElem.childNodes.item(0).data
+					otherPackageGephiNode = gephiNodesByPackage[otherGephiNodeName]
 					print "Edge: %s -> %s" % (thisPackageGephiNode, otherPackageGephiNode)
 					nuEdge = g.addDirectedEdge(thisPackageGephiNode, otherPackageGephiNode)
-					nuEdge.label="Source-DependsUpon-Target"
+					#seems gephi has a bug that sometimes claims the new 
+					#created edge is a NoneType for whatever reason
+					#workaround is to read the edge from gephis store...
+					reReadEdge = thisPackageGephiNode -> otherPackageGephiNode
+					#...and set attributes on that object 
+					reReadEdge.label="Source-DependsUpon-Target"
 					#set the boolean here to false for all nodes.
 					#will be set in Pass 4, see fctPass4HandleCycles
-					nuEdge.isInCycle = bool(False)
+					reReadEdge.isInCycle = bool(False)
 	
  #
  # PASS 1: Go over all Package-Elements and create a gephi Node for them
  # We need this for later wiring dependencies thru edges
+ # result will be a mapping of "full package name" (node attrib 'package') -> node
  #
 def fctPass1ReadPackageCreateNodes(packagesXMLElem):
-	gephiNodesByLabel = {}
+	gephiNodesByPackage = {}
 	##print packagesElem
 	##print packagesElem.childNodes
 	for xmlElem in packagesXMLElem.childNodes: 
 		if xmlElem.nodeType==dom.Node.ELEMENT_NODE and xmlElem.nodeName=="Package":
 			gephiNodeNameFull = xmlElem.getAttribute("name")
-			gephiNodeName = fctStrippedNodeName(gephiNodeNameFull)
-			print "%d, %s = %s" % (xmlElem.nodeType, xmlElem.nodeName, gephiNodeName)
-			nuGephiNode = g.addNode(label=gephiNodeName,color=blue, size=5.0)
+			gephiNodeLabel = fctStrippedNodeName(gephiNodeNameFull)
+			print "%d, %s = %s" % (xmlElem.nodeType, xmlElem.nodeName, gephiNodeLabel)
+			nuGephiNode = g.addNode(label=gephiNodeLabel,color=blue, size=5.0)
 			#add the full name of the package as a separate column
 			nuGephiNode.package = gephiNodeNameFull
-			gephiNodesByLabel[gephiNodeName] = nuGephiNode
-	return gephiNodesByLabel	
+			gephiNodesByPackage[gephiNodeNameFull] = nuGephiNode
+	return gephiNodesByPackage	
 
 	#
 	# Use a Package name as coming from the JDepend-File
@@ -125,10 +131,11 @@ def fctPass1ReadPackageCreateNodes(packagesXMLElem):
 	# This is usefull for having shorter Labels on the nodes
 	#
 def fctStrippedNodeName(originalPackageName):
-	if originalPackageName.startswith(cfg_stripCommonBasePackage):
-		return originalPackageName[len(cfg_stripCommonBasePackage):]
-	else:
-		return originalPackageName
+	for aPrefix in cfg_stripCommonBasePackage:
+		if originalPackageName.startswith(aPrefix):
+			return originalPackageName[len(aPrefix):]
+	
+	return originalPackageName
 
 		
     #
@@ -184,6 +191,8 @@ def main():
 		n.longestPath = maxVal		
 	
 main()	
+##
+#Access to Modularity Class attribute after haviing it computed - int(n.__findattr_ex__("Modularity Class")) * 100
 	
 ##
 #Some calls for try out thing in console
