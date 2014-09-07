@@ -20,7 +20,7 @@ This script uses the XML output as produceed by This is [JDepend](http://http://
 7. Open Gephi and create a new Project
 8. In Gephi - Change to Datalaboratory View and open the Scripting Console (somewhere on the left side)
 9. Now type into the Scripting Console Window: ``execfile("<yourpath>\\jdepend-xml-to-nodes_and_edges.py")`` and press \<Enter\>. Note: Please use double backslash on Windows, e.g. ``execfile("D:\\temp\\jdepend-xml-to-nodes_and_edges.py")`` 
-10. Hopefully the script runs without errors. Checkout both the *Nodes* and the *Edges* Tab. Of Datalaboratory View. It should be populated with entries now. 
+10. Hopefully the script runs without errors. Checkout both the *Nodes* and the *Edges* Tab of the Datalaboratory View. It should be populated with entries now. 
 11. Now you're ready to switch to Gephis' Overview View and checkout the dependency graph.
 12. Finally it's time to figure out what Gephi can do: 
     * Try out several *Layout Algorithms*. 
