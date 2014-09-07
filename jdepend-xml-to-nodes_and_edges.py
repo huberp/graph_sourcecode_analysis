@@ -12,10 +12,9 @@
 import xml.dom.minidom as dom
 import sys
 
-## CONFIGURATION
+## CONFIGURATION - PLEASE EDIT
 ## 1.) Input file
-#cfg_yourJDependInputFile = "<your path to file>/examples/junit/jdepend-on-junit.xml"
-cfg_yourJDependInputFile = "D:/Eigene Dateien/Documents/LEARNING/COURSERA/Data Science Specialization/graph_sourcecode_analysis/examples/junit/jdepend-on-junit.xml"
+cfg_yourJDependInputFile = "<your path to file>/examples/junit/jdepend-on-junit.xml"
 ## 2.) Common Package, will be stripped of node lables to make them better readable
 ## The real package name will be kept in the node attribute "package"
 cfg_stripCommonBasePackage = ["org.junit.","junit."]

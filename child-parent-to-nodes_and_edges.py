@@ -8,8 +8,6 @@
 ####################################################################################################
 # START WITH: execfile("<your path to file>/child-parent-to-nodes_and_edges.py")
 #
-# Read about Python, german only: http://openbook.galileocomputing.de/python/python_kapitel_08_003.htm#mjfb4d02fccab9edcdc5ad084f35eaeaa6
-#
 import sys
 import inspect
 
