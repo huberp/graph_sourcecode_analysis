@@ -5,9 +5,9 @@ Here you find two examples how this could be used.
 
 ## Use Case 1: Using JDepend output to create Nodes and Edges in Gephi
 
-This script uses the XML output as produceed by This is [JDepend](http://http://clarkware.com/software/JDepend.html/ "JDepend") inline link eclipose pluging.
+This script uses the XML output as produced by [JDepend](http://http://clarkware.com/software/JDepend.html/ "JDepend") eclipse pluging.
 
-### The Workflow steps to produce graphs is:
+### The Workflow steps to produce a Package graph in Gephi is:
 
 1. Prerequisites: You have chosen your favorite Java(tm) IDE and installed the JDepend plugin. I use eclipse as my favorite IDE
 2. Run JDepend on your project. 
