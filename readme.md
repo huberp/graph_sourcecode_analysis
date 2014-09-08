@@ -1,17 +1,23 @@
 # Gephi Python Examples
 These examples are using the Graph Visualization Tool [Gephi](https://gephi.github.io/ "Gephi").
 Gephi comes with a Python scripting engine, that can be used to create nodes and edges from arbitrary inputs.
-Here you find two examples how this could be used. 
+The work you find here was originaly created as a [Peer Grading Assignment](https://github.com/huberp/graph_sourcecode_analysis/blob/master/assignment_report/Social%20Network%20Analysis%202013%20Assignment.pdf?raw=true)
+for the Coursera MOOC [Social Network Analysis](https://www.coursera.org/course/sna) and has been slightly adapted since then. 
+If you're interested in *social network analysis* then the [book project of my Coursera Class](https://dl.dropboxusercontent.com/u/3765509/Social_Network_Analysis-Coursera2013.pdf) might interest you as well. 
+It contains a lot of astonishing work created by my fellow students. 
+ 
+The second Use case was build later, when I wanted to visualize the complexity of a database parent/child structure. 
 
 ## Use Case 1: Using JDepend output to create Nodes and Edges in Gephi
 
 This script uses the XML output as produced by [JDepend](http://http://clarkware.com/software/JDepend.html/ "JDepend") eclipse pluging.
+As my report showed, you can do some nice things on package dependency graphs and be it only to make them colorful ;-)
 
 ### The Workflow steps to produce a Package graph in Gephi is:
 
 1. Prerequisites: You have chosen your favorite Java(tm) IDE and installed the JDepend plugin. I use eclipse as my favorite IDE
 2. Run JDepend on your project. 
-3. Export Jdepend output as XML file, let's name it *\<jdepend.xml\>*. I have included an example for such an XML created from JUnit(tm). check out folder /examples
+3. Export JDepend output as XML file, let's name it *\<jdepend.xml\>*. I have included an example for such an XML created from JUnit(tm). check out folder /examples
 4. Git Clone this repository to your local machine, let's say to folder *\<yourpath\>*
 5. Open the file *jdepend-xml-to-nodes_and_edges.py*
 6. Edit the line which starts with 
