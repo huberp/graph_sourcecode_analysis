@@ -21,8 +21,9 @@ As my report showed, you can do some nice things on package dependency graphs an
 4. Git Clone this repository to your local machine, let's say to folder *\<yourpath\>*
 5. Open the file *jdepend-xml-to-nodes_and_edges.py*
 6. Edit the line which starts with 
-    * ``cfg_yourJDependInputFile =``. Point the value to your file *\<jdepend.xml\>* including the full path. Save it!
+    * ``cfg_yourJDependInputFile =``. Point the value to your file *\<jdepend.xml\>* including the full path. 
     * ``cfg_stripCommonBasePackage``. Create a list of Package prefixes which will be stripped of in order to make the lables shorter. Note: The full qualified package name is still available in column *package*. In my JUnit example I've used ``["org.junit.","junit."]``
+    * Please don't forget to save your changes.
 7. Open Gephi and create a new Project
 8. In Gephi - Change to Datalaboratory View and open the Scripting Console (somewhere on the left side)
 9. Now type into the Scripting Console Window: ``execfile("<yourpath>\\jdepend-xml-to-nodes_and_edges.py")`` and press \<Enter\>. Note: Please use double backslash on Windows, e.g. ``execfile("D:\\temp\\jdepend-xml-to-nodes_and_edges.py")`` 
@@ -30,8 +31,8 @@ As my report showed, you can do some nice things on package dependency graphs an
 11. Now you're ready to switch to Gephis' Overview View and checkout the dependency graph.
 12. Finally it's time to figure out what Gephi can do: 
     * Try out several *Layout Algorithms*. 
-    * Go and compute *Graph Metrics* like for instance *Eccentrisity*. 
-    * Colour your nodes by *Partition* Parameter 
+    * Go and compute *Graph Metrics* like for instance *Eccentrisity* or *Betweeness*
+    * Colour your nodes by applying the *Partition* Function. You might find partitioning by *Modularity* interesting.
 
 ### Some Experiments
 I created the first Version of this script back in 2013 for the Peer Project of the Coursera MOOC [Social Network Analysis](https://www.coursera.org/course/sna).
