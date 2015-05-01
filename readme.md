@@ -8,7 +8,7 @@ It contains a lot of astonishing work created by my fellow students.
  
 The second Use case was build later, when I wanted to visualize the complexity of a database parent/child structure. 
 
-## Use Case 1: Using JDepend output to create Nodes and Edges in Gephi
+## Use Case 1: Using JDepend output to create Nodes and Edges in Gephi - Software Visualization
 
 This script uses the XML output as produced by [JDepend](http://http://clarkware.com/software/JDepend.html/ "JDepend") eclipse pluging.
 As my report showed, you can do some nice things on package dependency graphs and be it only to make them colorful ;-)
@@ -37,7 +37,7 @@ As my report showed, you can do some nice things on package dependency graphs an
 ### Some Experiments
 I created the first Version of this script back in 2013 for the Peer Project of the Coursera MOOC [Social Network Analysis](https://www.coursera.org/course/sna).
 I have included my report in this repository which contains some analysis for JUnit showing that JUnit has, well, a Architecture that is close to a 
-very random Erd?s–Rényi Graph...;-)
+very random Erd?sâ€“RÃ©nyi Graph...;-)
 
 Here's some files for you: 
 
